@@ -1,0 +1,11 @@
+version: '3'
+services:
+  react-lab-app:
+    image: react-dev-lab:1.0.0
+    volumes:
+      - ./app:/app
+      - /app/node_modules
+    command: sh -c "cd react-lab-app && npm start"
+    ports:
+      - 8080:3000
+    tty: true
